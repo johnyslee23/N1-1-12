@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#17283b">
+<title>새 버전 · N1 혼합 사지선다 60문제</title>
+<style>
+:root{--ink:#1e2936;--muted:#687383;--paper:#fffdf8;--ground:#f1ede4;--line:#dcd4c8;--navy:#17283b;--blue:#2d6079;--coral:#d75e58;--gold:#d8a53a;--green:#176b4d;--greenbg:#e6f5ed;--red:#a12d3e;--redbg:#fdebee;--safe:max(13px,env(safe-area-inset-bottom))}*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{margin:0;background:var(--ground);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.65}button,input{font:inherit}.wrap{width:min(800px,100%);margin:auto;padding:0 15px calc(104px + env(safe-area-inset-bottom))}.hero{margin:0 -15px;padding:calc(30px + env(safe-area-inset-top)) 22px 29px;color:#fff;background:linear-gradient(145deg,#17283b,#2d6079 65%,#b65050)}.eyebrow{margin:0;color:#ffd3a1;font-size:.76rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase}h1{margin:.25rem 0 .7rem;font-size:clamp(1.85rem,8vw,3.05rem);line-height:1.16;letter-spacing:-.045em}.hero p{margin:.4rem 0}.badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.badge{padding:6px 10px;border:1px solid #ffffff52;border-radius:999px;background:#ffffff15;font-size:.8rem;font-weight:800}.reference{margin:18px 0;padding:17px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 24px #20273714}.reference h2{margin:.2rem 0}.reference>p{margin:.3rem 0 1rem;color:var(--muted)}.lesson-ref{margin:8px 0;border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden}.lesson-ref summary{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:8px;min-height:52px;padding:11px 12px;cursor:pointer;list-style:none}.lesson-ref summary::-webkit-details-marker{display:none}.lesson-ref summary b{color:#fff;background:var(--navy);border-radius:9px;text-align:center;padding:5px}.lesson-ref summary span{font-weight:850}.lesson-ref summary em{color:var(--muted);font-size:.76rem;font-style:normal}.lesson-ref ul{margin:0;padding:0 13px 13px;list-style:none}.lesson-ref li{display:grid;grid-template-columns:minmax(135px,1fr) 1fr;gap:2px 10px;padding:10px 4px;border-top:1px solid #eee7dc}.lesson-ref li strong{color:var(--blue)}.lesson-ref li span{font-size:.9rem;font-weight:750}.lesson-ref li small{grid-column:1/-1;color:var(--muted)}.lesson-divider{scroll-margin-top:12px;display:flex;align-items:center;gap:10px;padding:28px 3px 12px}.lesson-divider span{padding:5px 9px;border-radius:8px;color:#fff;background:var(--coral);font-weight:850}.lesson-divider h2{margin:0}.question{scroll-margin-top:12px;margin:0 0 16px;padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 18px #20273710}.q-head{display:flex;align-items:center;gap:9px;color:var(--blue);font-size:.82rem;font-weight:850}.q-number{width:42px;height:34px;display:grid;place-items:center;border-radius:10px;color:#fff;background:var(--navy);font-size:.92rem}.stem{margin:13px 0;font-size:1.08rem;font-weight:750;line-height:1.95}.blank{color:var(--coral);font-weight:900}.term{display:inline;min-height:34px;margin:0 1px;padding:2px 3px;border:0;border-bottom:2px dotted var(--blue);border-radius:4px;background:#e8f1f5;color:inherit;font:inherit;font-weight:850;line-height:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}.term[aria-expanded=true]{color:#fff;background:var(--blue);border-bottom-color:transparent}.term-help{margin:-2px 0 13px;padding:11px 12px;border-left:4px solid var(--blue);border-radius:9px;background:#edf6fb}.term-help .term-reading{margin-left:8px;color:var(--muted);font-size:.88rem}.term-help p{margin:.2rem 0 0;font-weight:750}.options{display:grid;gap:9px}.option{min-height:52px;display:flex;align-items:flex-start;gap:11px;padding:12px;border:1.5px solid #d4cec4;border-radius:13px;background:#fff;cursor:pointer;touch-action:manipulation}.option:active{transform:scale(.993)}.option input{position:absolute;opacity:0}.choice-num{flex:0 0 28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#e9ecef;font-weight:850}.option.selected{border-color:var(--blue);background:#edf6fb}.option.correct{border-color:var(--green);background:var(--greenbg)}.option.wrong{border-color:var(--red);background:var(--redbg)}.option.correct .choice-num{color:#fff;background:var(--green)}.option.wrong .choice-num{color:#fff;background:var(--red)}.option.locked{cursor:default}.feedback{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}.result-line{margin:0 0 10px;padding:10px 12px;border-radius:10px;font-weight:850}.result-line.ok{color:var(--green);background:var(--greenbg)}.result-line.no{color:var(--red);background:var(--redbg)}.answer-box{padding:12px;border-radius:11px;background:#fff2d5}.answer-box p{margin:.25rem 0 0;font-size:.91rem}.translation,.why{margin:9px 0 0;padding:11px 12px;border-radius:11px;font-size:.91rem}.translation{background:#edf6fb}.why{background:#f1eef7}.translation b,.why b{display:block;margin-bottom:2px;font-size:.8rem;letter-spacing:.03em}.bottom{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:9px 10px var(--safe);background:#fffdf8f2;border-top:1px solid var(--line);box-shadow:0 -8px 22px #20273718;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}.bottom-inner{width:min(800px,100%);margin:auto;display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:7px}.tool{min-height:46px;border:0;border-radius:12px;background:#e5e8eb;color:var(--ink);font-size:.79rem;font-weight:850}.tool.primary{color:#fff;background:var(--navy)}.progress{grid-column:1/-1;height:4px;background:#ded7cc;border-radius:99px;overflow:hidden}.progress i{display:block;width:0;height:100%;background:var(--coral);transition:width .2s}.counter{position:fixed;right:10px;top:max(10px,env(safe-area-inset-top));z-index:30;padding:6px 9px;border-radius:999px;color:#fff;background:#111b28df;font-size:.72rem;font-weight:850;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}.footer{padding:28px 5px 8px;color:var(--muted);font-size:.82rem;text-align:center}@media(min-width:700px){.wrap{padding-left:22px;padding-right:22px}.hero{margin:0 -22px;padding-left:38px;padding-right:38px;border-radius:0 0 24px 24px}.question{padding:22px}.reference-grid{columns:2}}@media print{body{background:#fff}.bottom,.counter{display:none}.wrap{width:100%;padding:0}.hero{margin:0;color:#000;background:#fff}.question,.reference{box-shadow:none;break-inside:avoid}}
+</style></head><body><div class="counter" id="counter">풀이 0/60 · 정답 0</div><main class="wrap">
+<header class="hero"><p class="eyebrow">새 버전 · 혼합 사지선다</p><h1>1–12과 무작위 복습<br>60문제</h1><p>과 구분 없이 섞은 60문제입니다. 문제의 밑줄 친 한자·표현을 누르면 읽기와 한국어 뜻이 열립니다. 답을 고르는 즉시 정답, 문장 뜻, 구별 포인트가 표시됩니다.</p><div class="badges"><span class="badge">60문제</span><span class="badge">사지선다 · 전 과 혼합</span><span class="badge">한자 터치 해설</span><span class="badge">iPhone Safari · 오프라인</span></div></header>
+<section class="reference" id="reference"><p class="eyebrow">Quick reference</p><h2>1–12과 문형 빠른 복습</h2><p>과를 누르면 문형의 핵심 차이가 열립니다. 문제를 먼저 풀고 막힐 때만 확인해도 좋습니다.</p><details class="lesson-ref"><summary><b>1과</b><span>시간관계</span><em>6문형</em></summary><ul><li><strong lang="ja">～が早いか</strong><span>~하자마자</span><small>앞 동작 직후 예상 밖의 일이 거의 동시에 일어납니다.</small></li><li><strong lang="ja">～や・～や否や</strong><span>~하자마자</span><small>순간적인 연속을 객관적으로 묘사하며 의지·명령은 뒤에 잘 오지 않습니다.</small></li><li><strong lang="ja">～なり</strong><span>~하자마자</span><small>같은 주어가 앞 동작 뒤 평소와 다른 행동을 갑자기 합니다.</small></li><li><strong lang="ja">～そばから</strong><span>~하는 족족</span><small>같은 일이 반복되고, 보통 곤란하거나 부정적인 결과가 이어집니다.</small></li><li><strong lang="ja">～てからというもの(は)</strong><span>~한 뒤로 줄곧</span><small>어떤 일을 계기로 상태가 크게 바뀌어 계속됩니다.</small></li><li><strong lang="ja">～にあって</strong><span>~한 상황·시대에</span><small>특별하거나 극단적인 상황을 배경으로 듭니다.</small></li></ul></details><details class="lesson-ref"><summary><b>2과</b><span>범위의 시초·한도</span><em>5문형</em></summary><ul><li><strong lang="ja">～を皮切りに(して)</strong><span>~을 시작으로</span><small>한 사건을 출발점으로 같은 종류의 일이 잇따라 확산됩니다.</small></li><li><strong lang="ja">～に至るまで</strong><span>~에 이르기까지</span><small>범위의 끝을 의외성 있게 강조합니다.</small></li><li><strong lang="ja">～を限りに</strong><span>~을 마지막으로</span><small>그 시점 이후 지금까지 하던 일을 끝냅니다.</small></li><li><strong lang="ja">～をもって</strong><span>~을 기하여·~로써</span><small>격식 있게 종료 시점이나 수단을 나타냅니다.</small></li><li><strong lang="ja">～といったところだ</strong><span>기껏해야 ~정도다</span><small>수량·수준의 대략적인 상한을 낮게 평가합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>3과</b><span>한정·비한정·부가</span><em>5문형</em></summary><ul><li><strong lang="ja">～をおいて</strong><span>~을 제외하고는</span><small>그것보다 적합한 것은 없다고 높이 평가합니다.</small></li><li><strong lang="ja">～ならでは</strong><span>~만이 가능한</span><small>그 사람·장소만의 고유한 장점을 나타냅니다.</small></li><li><strong lang="ja">～にとどまらず</strong><span>~에 그치지 않고</span><small>범위가 더 넓은 곳까지 확대됩니다.</small></li><li><strong lang="ja">～はおろか</strong><span>~은커녕</span><small>당연한 앞 항목뿐 아니라 더 기본적인 뒤 항목도 성립하지 않습니다.</small></li><li><strong lang="ja">～もさることながら</strong><span>~도 물론이지만</span><small>앞도 인정하면서 뒤 항목을 더 강조합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>4과</b><span>예시</span><em>2문형</em></summary><ul><li><strong lang="ja">～なり～なり</strong><span>~든 ~든</span><small>같은 부류의 예를 들어 상대에게 선택·제안을 합니다.</small></li><li><strong lang="ja">～であれ～であれ／～であろうと～であろうと</strong><span>~이든 ~이든</span><small>두 경우 모두 뒤 판단에 영향을 주지 않음을 말합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>5과</b><span>관련·무관계</span><em>5문형</em></summary><ul><li><strong lang="ja">～いかんだ／～いかんで(は)</strong><span>~에 달려 있다</span><small>결과가 앞의 내용·상태에 따라 달라집니다.</small></li><li><strong lang="ja">～いかんにかかわらず</strong><span>~여하에 관계없이</span><small>앞의 결과나 상태가 어떻든 뒤는 변하지 않습니다.</small></li><li><strong lang="ja">～をものともせず(に)</strong><span>~을 아랑곳하지 않고</span><small>큰 어려움을 이겨 내는 용기·강인함을 높이 평가합니다.</small></li><li><strong lang="ja">～をよそに</strong><span>~을 무시한 채</span><small>주변의 걱정·기대와 무관하게 행동하여 비판적 뉘앙스를 냅니다.</small></li><li><strong lang="ja">～ならいざしらず</strong><span>~이라면 몰라도</span><small>특수한 경우는 인정하지만 현재 경우에는 적절하지 않다고 판단합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>6과</b><span>양태</span><em>5문형</em></summary><ul><li><strong lang="ja">～んばかりだ／～んばかりに</strong><span>금방이라도 ~할 듯</span><small>실제로 하지는 않았지만 그럴 듯한 표정·기세를 나타냅니다.</small></li><li><strong lang="ja">～とばかりに</strong><span>마치 ~라고 하듯</span><small>말 대신 태도·행동으로 강한 의사를 드러냅니다.</small></li><li><strong lang="ja">～ともなく／～ともなしに</strong><span>딱히 ~하려 한 것도 없이</span><small>명확한 의도 없이 무심코 한 행동입니다.</small></li><li><strong lang="ja">～ながらに(して)</strong><span>~한 상태 그대로</span><small>태어나면서부터 또는 상태가 변하지 않은 채임을 나타냅니다.</small></li><li><strong lang="ja">～きらいがある</strong><span>~하는 경향이 있다</span><small>좋지 않은 경향을 완곡하게 지적합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>7과</b><span>부대행동</span><em>3문형</em></summary><ul><li><strong lang="ja">～がてら</strong><span>~할 겸</span><small>이동을 동반하는 주된 행동에 다른 목적을 덧붙입니다.</small></li><li><strong lang="ja">～かたがた</strong><span>~할 겸·아울러</span><small>격식 있는 인사·방문에서 두 목적을 함께 수행합니다.</small></li><li><strong lang="ja">～かたわら</strong><span>~하는 한편</span><small>본업을 계속하면서 장기간 별도의 활동도 병행합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>8과</b><span>역접</span><em>5문형</em></summary><ul><li><strong lang="ja">～ところを</strong><span>~한 상황인데도</span><small>상대의 상황을 배려하며 감사·사과·부탁을 정중히 말합니다.</small></li><li><strong lang="ja">～ものを</strong><span>~했으면 좋았을 텐데</span><small>사실과 반대되는 가정에 아쉬움·불만을 나타냅니다.</small></li><li><strong lang="ja">～とはいえ</strong><span>~라고는 하지만</span><small>앞 사실을 인정하면서 그 상태가 완전히 달라진 것은 아님을 말합니다.</small></li><li><strong lang="ja">～といえども</strong><span>비록 ~이라 해도</span><small>극단적인 경우라도 원칙·판단에는 예외가 없다는 격식 표현입니다.</small></li><li><strong lang="ja">～と思いきや</strong><span>~인 줄 알았더니</span><small>예상과 정반대의 결과가 나왔음을 나타냅니다.</small></li></ul></details><details class="lesson-ref"><summary><b>9과</b><span>조건</span><em>5문형</em></summary><ul><li><strong lang="ja">～とあれば</strong><span>~을 위해서라면</span><small>특별한 조건 아래에서 화자의 의지·판단을 말합니다.</small></li><li><strong lang="ja">～たら最後・～たが最後</strong><span>일단 ~하면 끝장이다</span><small>한번 벌어지면 되돌리기 어려운 나쁜 결과가 계속됩니다.</small></li><li><strong lang="ja">～ようでは</strong><span>그런 식이라면</span><small>바람직하지 않은 상태를 지적하고 부정적 결과를 판단합니다.</small></li><li><strong lang="ja">～なしに(は)・～なくして(は)</strong><span>~없이는</span><small>앞 요소가 없으면 뒤의 일이 성립하지 않음을 강조합니다.</small></li><li><strong lang="ja">～くらいなら</strong><span>~할 바에는</span><small>싫은 선택보다 뒤의 대안이 낫다고 말합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>10과</b><span>역접조건</span><em>5문형</em></summary><ul><li><strong lang="ja">～(よ)うと(も)・～(よ)うが</strong><span>~해도</span><small>어떤 조건이라도 화자의 판단·결심은 바뀌지 않습니다.</small></li><li><strong lang="ja">～(よ)うと～まいと</strong><span>~하든 안 하든</span><small>상반된 두 조건 어느 쪽에도 결과가 영향받지 않습니다.</small></li><li><strong lang="ja">～であれ・～であろうと</strong><span>비록 ~이라도</span><small>명사 조건을 받아도 원칙·판단이 변하지 않습니다.</small></li><li><strong lang="ja">～たところで</strong><span>~해 보았자</span><small>그렇게 해도 소용없거나 기대한 결과가 나오지 않습니다.</small></li><li><strong lang="ja">～ば～で・～なら～で・～たら～たで</strong><span>~면 ~대로</span><small>어느 상태든 그 나름의 문제나 대응이 있음을 말합니다.</small></li></ul></details><details class="lesson-ref"><summary><b>11과</b><span>목적·수단</span><em>3문형</em></summary><ul><li><strong lang="ja">～べく</strong><span>~하고자</span><small>의지를 가진 주체가 목적을 위해 행동하는 문어체 표현입니다.</small></li><li><strong lang="ja">～んがため(に)</strong><span>~하기 위해</span><small>중대한 목적을 위해 적극적으로 행동하는 문어체 표현입니다.</small></li><li><strong lang="ja">～をもって</strong><span>~으로써</span><small>격식 있게 수단·방법을 나타냅니다.</small></li></ul></details><details class="lesson-ref"><summary><b>12과</b><span>원인·이유</span><em>5문형</em></summary><ul><li><strong lang="ja">～ばこそ</strong><span>~이기 때문에야말로</span><small>일반적으로 이유 같지 않은 것을 특별한 이유로 강하게 듭니다.</small></li><li><strong lang="ja">～とあって</strong><span>특별히 ~한 상황이라</span><small>특별한 상황에 맞는 당연한 결과가 뒤에 옵니다.</small></li><li><strong lang="ja">～ではあるまいし</strong><span>~도 아니니</span><small>그런 경우가 아니므로 상식적으로 행동하라고 충고·비판합니다.</small></li><li><strong lang="ja">～手前</strong><span>~한 체면상</span><small>이미 한 말이나 사회적 입장 때문에 행동하지 않을 수 없습니다.</small></li><li><strong lang="ja">～ゆえ(に)</strong><span>~인 까닭에</span><small>격식 있는 문장에서 이유를 나타냅니다.</small></li></ul></details></section>
+<section id="quiz"><article class="question" data-q="1" data-answer="2">
+          <div class="q-head"><span class="q-number">01</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">試験は簡単だ<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="予想以上" data-reading="よそういじょう" data-meaning="예상 이상">予想以上</button>に難しかった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q1" value="1"><span class="choice-num">1</span><span lang="ja">を限りに</span></label><label class="option" data-option="2"><input type="radio" name="q1" value="2"><span class="choice-num">2</span><span lang="ja">と思いきや</span></label><label class="option" data-option="3"><input type="radio" name="q1" value="3"><span class="choice-num">3</span><span lang="ja">とはいえ</span></label><label class="option" data-option="4"><input type="radio" name="q1" value="4"><span class="choice-num">4</span><span lang="ja">ところを</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>8과 · 역접</small><br><strong lang="ja">～と思いきや</strong><p>예상과 정반대의 결과가 나왔음을 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>시험이 쉬운 줄 알았더니 예상 이상으로 어려웠다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>예상과 정반대 결과가 나왔으므로 ‘と思いきや’입니다.</p>
+          </section>
+        </article><article class="question" data-q="2" data-answer="2">
+          <div class="q-head"><span class="q-number">02</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="住民" data-reading="じゅうみん" data-meaning="주민">住民</button>の理解と協力<span class="blank">（　）</span>、この計画は実現できない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q2" value="1"><span class="choice-num">1</span><span lang="ja">たら最後</span></label><label class="option" data-option="2"><input type="radio" name="q2" value="2"><span class="choice-num">2</span><span lang="ja">なくしては</span></label><label class="option" data-option="3"><input type="radio" name="q2" value="3"><span class="choice-num">3</span><span lang="ja">とあれば</span></label><label class="option" data-option="4"><input type="radio" name="q2" value="4"><span class="choice-num">4</span><span lang="ja">ならでは</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>9과 · 조건</small><br><strong lang="ja">～なしに(は)・～なくして(は)</strong><p>앞 요소가 없으면 뒤의 일이 성립하지 않음을 강조합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>주민의 이해와 협력 없이는 이 계획을 실현할 수 없다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>뒤의 실현에 반드시 필요한 조건이므로 ‘なくしては’입니다.</p>
+          </section>
+        </article><article class="question" data-q="3" data-answer="3">
+          <div class="q-head"><span class="q-number">03</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="海外勤務" data-reading="かいがいきんむ" data-meaning="해외 근무">海外勤務</button>を始め<span class="blank">（　）</span>、家族と過ごす時間の大切さを<button class="term" type="button" aria-expanded="false" data-term="痛感" data-reading="つうかん" data-meaning="통감·절감">痛感</button>している。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q3" value="1"><span class="choice-num">1</span><span lang="ja">ともなく</span></label><label class="option" data-option="2"><input type="radio" name="q3" value="2"><span class="choice-num">2</span><span lang="ja">が早いか</span></label><label class="option" data-option="3"><input type="radio" name="q3" value="3"><span class="choice-num">3</span><span lang="ja">てからというもの</span></label><label class="option" data-option="4"><input type="radio" name="q3" value="4"><span class="choice-num">4</span><span lang="ja">にあって</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>1과 · 시간관계</small><br><strong lang="ja">～てからというもの(は)</strong><p>어떤 일을 계기로 상태가 크게 바뀌어 계속됩니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>해외 근무를 시작한 뒤로 줄곧 가족과 보내는 시간의 소중함을 절감한다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>어떤 일을 계기로 바뀐 상태가 계속된다는 뜻입니다.</p>
+          </section>
+        </article><article class="question" data-q="4" data-answer="3">
+          <div class="q-head"><span class="q-number">04</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">彼はもう話すことはない<span class="blank">（　）</span>、席を立った。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q4" value="1"><span class="choice-num">1</span><span lang="ja">ながらに</span></label><label class="option" data-option="2"><input type="radio" name="q4" value="2"><span class="choice-num">2</span><span lang="ja">そばから</span></label><label class="option" data-option="3"><input type="radio" name="q4" value="3"><span class="choice-num">3</span><span lang="ja">とばかりに</span></label><label class="option" data-option="4"><input type="radio" name="q4" value="4"><span class="choice-num">4</span><span lang="ja">んばかりに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>6과 · 양태</small><br><strong lang="ja">～とばかりに</strong><p>말 대신 태도·행동으로 강한 의사를 드러냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>그는 ‘더 말할 것은 없다’고 하듯 자리에서 일어났다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>말 대신 행동으로 의사를 드러내므로 ‘とばかりに’입니다.</p>
+          </section>
+        </article><article class="question" data-q="5" data-answer="1">
+          <div class="q-head"><span class="q-number">05</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="新薬" data-reading="しんやく" data-meaning="신약">新薬</button>を開発す<span class="blank">（　）</span>、研究チームは<button class="term" type="button" aria-expanded="false" data-term="昼夜" data-reading="ちゅうや" data-meaning="주야·밤낮">昼夜</button>実験を続けた。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q5" value="1"><span class="choice-num">1</span><span lang="ja">べく</span></label><label class="option" data-option="2"><input type="radio" name="q5" value="2"><span class="choice-num">2</span><span lang="ja">をもって</span></label><label class="option" data-option="3"><input type="radio" name="q5" value="3"><span class="choice-num">3</span><span lang="ja">とあって</span></label><label class="option" data-option="4"><input type="radio" name="q5" value="4"><span class="choice-num">4</span><span lang="ja">んがために</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>11과 · 목적·수단</small><br><strong lang="ja">～べく</strong><p>의지를 가진 주체가 목적을 위해 행동하는 문어체 표현입니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>신약을 개발하고자 연구팀은 밤낮으로 실험을 계속했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>목적을 위한 의지적 행동이며 ‘する→すべく’의 형태에 주의합니다.</p>
+          </section>
+        </article><article class="question" data-q="6" data-answer="4">
+          <div class="q-head"><span class="q-number">06</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">今さら謝っ<span class="blank">（　）</span>、失った<button class="term" type="button" aria-expanded="false" data-term="信頼" data-reading="しんらい" data-meaning="신뢰">信頼</button>はすぐには戻らない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q6" value="1"><span class="choice-num">1</span><span lang="ja">てからというもの</span></label><label class="option" data-option="2"><input type="radio" name="q6" value="2"><span class="choice-num">2</span><span lang="ja">ようと</span></label><label class="option" data-option="3"><input type="radio" name="q6" value="3"><span class="choice-num">3</span><span lang="ja">ならそれで</span></label><label class="option" data-option="4"><input type="radio" name="q6" value="4"><span class="choice-num">4</span><span lang="ja">たところで</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>10과 · 역접조건</small><br><strong lang="ja">～たところで</strong><p>그렇게 해도 소용없거나 기대한 결과가 나오지 않습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>이제 와서 사과해 보았자 잃은 신뢰는 금세 돌아오지 않는다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>행동해도 기대한 효과가 없다는 부정적 판단입니다.</p>
+          </section>
+        </article><article class="question" data-q="7" data-answer="2">
+          <div class="q-head"><span class="q-number">07</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">彼女は会社に勤める<span class="blank">（　）</span>、週末は<button class="term" type="button" aria-expanded="false" data-term="通訳" data-reading="つうやく" data-meaning="통역">通訳</button>のボランティアをしている。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q7" value="1"><span class="choice-num">1</span><span lang="ja">がてら</span></label><label class="option" data-option="2"><input type="radio" name="q7" value="2"><span class="choice-num">2</span><span lang="ja">かたわら</span></label><label class="option" data-option="3"><input type="radio" name="q7" value="3"><span class="choice-num">3</span><span lang="ja">を皮切りに</span></label><label class="option" data-option="4"><input type="radio" name="q7" value="4"><span class="choice-num">4</span><span lang="ja">かたがた</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>7과 · 부대행동</small><br><strong lang="ja">～かたわら</strong><p>본업을 계속하면서 장기간 별도의 활동도 병행합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>그녀는 회사에 다니는 한편 주말에는 통역 봉사를 한다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>본업과 장기간 지속되는 별도 활동을 병행하므로 ‘かたわら’입니다.</p>
+          </section>
+        </article><article class="question" data-q="8" data-answer="3">
+          <div class="q-head"><span class="q-number">08</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">この<button class="term" type="button" aria-expanded="false" data-term="難役" data-reading="なんやく" data-meaning="어려운 배역">難役</button>を任せられる<button class="term" type="button" aria-expanded="false" data-term="俳優" data-reading="はいゆう" data-meaning="배우">俳優</button>は、彼<span class="blank">（　）</span>ほかにいない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q8" value="1"><span class="choice-num">1</span><span lang="ja">に至るまで</span></label><label class="option" data-option="2"><input type="radio" name="q8" value="2"><span class="choice-num">2</span><span lang="ja">はおろか</span></label><label class="option" data-option="3"><input type="radio" name="q8" value="3"><span class="choice-num">3</span><span lang="ja">をおいて</span></label><label class="option" data-option="4"><input type="radio" name="q8" value="4"><span class="choice-num">4</span><span lang="ja">ならでは</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>3과 · 한정·비한정·부가</small><br><strong lang="ja">～をおいて</strong><p>그것보다 적합한 것은 없다고 높이 평가합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>이 어려운 역을 맡길 수 있는 배우는 그를 제외하고는 달리 없다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>‘ほかにいない’와 호응해 유일한 적임자를 드는 ‘をおいて’가 맞습니다.</p>
+          </section>
+        </article><article class="question" data-q="9" data-answer="1">
+          <div class="q-head"><span class="q-number">09</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">新年のご<button class="term" type="button" aria-expanded="false" data-term="挨拶" data-reading="あいさつ" data-meaning="인사">挨拶</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="日頃" data-reading="ひごろ" data-meaning="평소">日頃</button>のお礼を申し上げます。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q9" value="1"><span class="choice-num">1</span><span lang="ja">かたがた</span></label><label class="option" data-option="2"><input type="radio" name="q9" value="2"><span class="choice-num">2</span><span lang="ja">を限りに</span></label><label class="option" data-option="3"><input type="radio" name="q9" value="3"><span class="choice-num">3</span><span lang="ja">がてら</span></label><label class="option" data-option="4"><input type="radio" name="q9" value="4"><span class="choice-num">4</span><span lang="ja">にあって</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>7과 · 부대행동</small><br><strong lang="ja">～かたがた</strong><p>격식 있는 인사·방문에서 두 목적을 함께 수행합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>신년 인사도 드릴 겸 평소의 감사 말씀을 올립니다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>격식 있는 인사말에 쓰이는 ‘かたがた’가 가장 적절합니다.</p>
+          </section>
+        </article><article class="question" data-q="10" data-answer="3">
+          <div class="q-head"><span class="q-number">10</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="警報" data-reading="けいほう" data-meaning="경보">警報</button>が鳴る<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="乗客" data-reading="じょうきゃく" data-meaning="승객">乗客</button>は<button class="term" type="button" aria-expanded="false" data-term="非常口" data-reading="ひじょうぐち" data-meaning="비상구">非常口</button>へ向かった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q10" value="1"><span class="choice-num">1</span><span lang="ja">なり</span></label><label class="option" data-option="2"><input type="radio" name="q10" value="2"><span class="choice-num">2</span><span lang="ja">を限りに</span></label><label class="option" data-option="3"><input type="radio" name="q10" value="3"><span class="choice-num">3</span><span lang="ja">や否や</span></label><label class="option" data-option="4"><input type="radio" name="q10" value="4"><span class="choice-num">4</span><span lang="ja">てからというもの</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>1과 · 시간관계</small><br><strong lang="ja">～や・～や否や</strong><p>순간적인 연속을 객관적으로 묘사하며 의지·명령은 뒤에 잘 오지 않습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>경보가 울리자마자 승객은 비상구로 향했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>객관적인 순간 연속입니다. ‘なり’는 같은 주어의 갑작스러운 행동에 초점이 있습니다.</p>
+          </section>
+        </article><article class="question" data-q="11" data-answer="1">
+          <div class="q-head"><span class="q-number">11</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">この製品は<button class="term" type="button" aria-expanded="false" data-term="性能" data-reading="せいのう" data-meaning="성능">性能</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="洗練" data-reading="せんれん" data-meaning="세련">洗練</button>されたデザインも魅力だ。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q11" value="1"><span class="choice-num">1</span><span lang="ja">もさることながら</span></label><label class="option" data-option="2"><input type="radio" name="q11" value="2"><span class="choice-num">2</span><span lang="ja">にとどまらず</span></label><label class="option" data-option="3"><input type="radio" name="q11" value="3"><span class="choice-num">3</span><span lang="ja">をおいて</span></label><label class="option" data-option="4"><input type="radio" name="q11" value="4"><span class="choice-num">4</span><span lang="ja">といったところで</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>3과 · 한정·비한정·부가</small><br><strong lang="ja">～もさることながら</strong><p>앞도 인정하면서 뒤 항목을 더 강조합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>이 제품은 성능도 물론이지만 세련된 디자인도 매력적이다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>앞 항목도 인정하면서 뒤 항목을 추가로 강조합니다.</p>
+          </section>
+        </article><article class="question" data-q="12" data-answer="4">
+          <div class="q-head"><span class="q-number">12</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">窓の外を見る<span class="blank">（　）</span>見ていると、昔の友人が通りかかった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q12" value="1"><span class="choice-num">1</span><span lang="ja">とばかりに</span></label><label class="option" data-option="2"><input type="radio" name="q12" value="2"><span class="choice-num">2</span><span lang="ja">きらいがあって</span></label><label class="option" data-option="3"><input type="radio" name="q12" value="3"><span class="choice-num">3</span><span lang="ja">なり</span></label><label class="option" data-option="4"><input type="radio" name="q12" value="4"><span class="choice-num">4</span><span lang="ja">ともなく</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>6과 · 양태</small><br><strong lang="ja">～ともなく／～ともなしに</strong><p>명확한 의도 없이 무심코 한 행동입니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>딱히 창밖을 보려던 것도 없이 보고 있는데 옛 친구가 지나갔다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>뚜렷한 의도 없이 무심코 한 행동을 나타냅니다.</p>
+          </section>
+        </article><article class="question" data-q="13" data-answer="1">
+          <div class="q-head"><span class="q-number">13</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">子供<span class="blank">（　）</span>、大人がそんな基本的な規則を知らないとは驚きだ。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q13" value="1"><span class="choice-num">1</span><span lang="ja">ならいざしらず</span></label><label class="option" data-option="2"><input type="radio" name="q13" value="2"><span class="choice-num">2</span><span lang="ja">をよそに</span></label><label class="option" data-option="3"><input type="radio" name="q13" value="3"><span class="choice-num">3</span><span lang="ja">いかんにかかわらず</span></label><label class="option" data-option="4"><input type="radio" name="q13" value="4"><span class="choice-num">4</span><span lang="ja">にとどまらず</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>5과 · 관련·무관계</small><br><strong lang="ja">～ならいざしらず</strong><p>특수한 경우는 인정하지만 현재 경우에는 적절하지 않다고 판단합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>아이라면 몰라도 어른이 그런 기본 규칙을 모른다니 놀랍다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>예외로 인정할 경우와 현재의 부적절한 경우를 대비합니다.</p>
+          </section>
+        </article><article class="question" data-q="14" data-answer="2">
+          <div class="q-head"><span class="q-number">14</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="未成年" data-reading="みせいねん" data-meaning="미성년">未成年</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="法律" data-reading="ほうりつ" data-meaning="법률">法律</button>を守らなければならない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q14" value="1"><span class="choice-num">1</span><span lang="ja">たところで</span></label><label class="option" data-option="2"><input type="radio" name="q14" value="2"><span class="choice-num">2</span><span lang="ja">であれ</span></label><label class="option" data-option="3"><input type="radio" name="q14" value="3"><span class="choice-num">3</span><span lang="ja">ようとしまいと</span></label><label class="option" data-option="4"><input type="radio" name="q14" value="4"><span class="choice-num">4</span><span lang="ja">かたがた</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>10과 · 역접조건</small><br><strong lang="ja">～であれ・～であろうと</strong><p>명사 조건을 받아도 원칙·판단이 변하지 않습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>미성년자라 해도 법률을 지켜야 한다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>명사 조건을 받아도 원칙에 예외가 없음을 나타냅니다.</p>
+          </section>
+        </article><article class="question" data-q="15" data-answer="4">
+          <div class="q-head"><span class="q-number">15</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="被災地" data-reading="ひさいち" data-meaning="피재지·재해 지역">被災地</button>の<button class="term" type="button" aria-expanded="false" data-term="復興" data-reading="ふっこう" data-meaning="부흥·복구">復興</button>に役立つ<span class="blank">（　）</span>、休日も返上して協力したい。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q15" value="1"><span class="choice-num">1</span><span lang="ja">にとどまらず</span></label><label class="option" data-option="2"><input type="radio" name="q15" value="2"><span class="choice-num">2</span><span lang="ja">なしには</span></label><label class="option" data-option="3"><input type="radio" name="q15" value="3"><span class="choice-num">3</span><span lang="ja">くらいなら</span></label><label class="option" data-option="4"><input type="radio" name="q15" value="4"><span class="choice-num">4</span><span lang="ja">とあれば</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>9과 · 조건</small><br><strong lang="ja">～とあれば</strong><p>특별한 조건 아래에서 화자의 의지·판단을 말합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>재해 지역의 복구에 도움이 된다면 휴일도 반납하고 협력하고 싶다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>특별한 조건 아래 적극적인 의지를 보이므로 ‘とあれば’입니다.</p>
+          </section>
+        </article><article class="question" data-q="16" data-answer="4">
+          <div class="q-head"><span class="q-number">16</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="祖国" data-reading="そこく" data-meaning="조국">祖国</button>の<button class="term" type="button" aria-expanded="false" data-term="独立" data-reading="どくりつ" data-meaning="독립">独立</button>を勝ち取ら<span class="blank">（　）</span>、人々は立ち上がった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q16" value="1"><span class="choice-num">1</span><span lang="ja">ながらにして</span></label><label class="option" data-option="2"><input type="radio" name="q16" value="2"><span class="choice-num">2</span><span lang="ja">をもって</span></label><label class="option" data-option="3"><input type="radio" name="q16" value="3"><span class="choice-num">3</span><span lang="ja">べくして</span></label><label class="option" data-option="4"><input type="radio" name="q16" value="4"><span class="choice-num">4</span><span lang="ja">んがために</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>11과 · 목적·수단</small><br><strong lang="ja">～んがため(に)</strong><p>중대한 목적을 위해 적극적으로 행동하는 문어체 표현입니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>조국의 독립을 쟁취하기 위해 사람들이 일어섰다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>중대한 목적을 위한 적극적 행동이므로 문어체 ‘んがために’가 맞습니다.</p>
+          </section>
+        </article><article class="question" data-q="17" data-answer="1">
+          <div class="q-head"><span class="q-number">17</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="不正" data-reading="ふせい" data-meaning="부정">不正</button>な要求を受け入れる<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="契約" data-reading="けいやく" data-meaning="계약">契約</button>を断るほうがましだ。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q17" value="1"><span class="choice-num">1</span><span lang="ja">くらいなら</span></label><label class="option" data-option="2"><input type="radio" name="q17" value="2"><span class="choice-num">2</span><span lang="ja">とあれば</span></label><label class="option" data-option="3"><input type="radio" name="q17" value="3"><span class="choice-num">3</span><span lang="ja">ようでは</span></label><label class="option" data-option="4"><input type="radio" name="q17" value="4"><span class="choice-num">4</span><span lang="ja">をものともせず</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>9과 · 조건</small><br><strong lang="ja">～くらいなら</strong><p>싫은 선택보다 뒤의 대안이 낫다고 말합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>부당한 요구를 받아들일 바에는 계약을 거절하는 편이 낫다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>싫은 선택보다 나은 대안을 제시하는 ‘くらいなら’입니다.</p>
+          </section>
+        </article><article class="question" data-q="18" data-answer="1">
+          <div class="q-head"><span class="q-number">18</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="退院" data-reading="たいいん" data-meaning="퇴원">退院</button>のご報告<span class="blank">（　）</span>、先生のお宅に伺った。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q18" value="1"><span class="choice-num">1</span><span lang="ja">かたがた</span></label><label class="option" data-option="2"><input type="radio" name="q18" value="2"><span class="choice-num">2</span><span lang="ja">がてら</span></label><label class="option" data-option="3"><input type="radio" name="q18" value="3"><span class="choice-num">3</span><span lang="ja">かたわら</span></label><label class="option" data-option="4"><input type="radio" name="q18" value="4"><span class="choice-num">4</span><span lang="ja">にとどまらず</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>7과 · 부대행동</small><br><strong lang="ja">～かたがた</strong><p>격식 있는 인사·방문에서 두 목적을 함께 수행합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>퇴원 보고도 드릴 겸 선생님 댁을 방문했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>격식 있는 방문·인사 목적에는 ‘かたがた’가 자연스럽습니다.</p>
+          </section>
+        </article><article class="question" data-q="19" data-answer="1">
+          <div class="q-head"><span class="q-number">19</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">部屋は広けれ<span class="blank">（　）</span>、掃除が大変になる。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q19" value="1"><span class="choice-num">1</span><span lang="ja">ば広いで</span></label><label class="option" data-option="2"><input type="radio" name="q19" value="2"><span class="choice-num">2</span><span lang="ja">たところで広い</span></label><label class="option" data-option="3"><input type="radio" name="q19" value="3"><span class="choice-num">3</span><span lang="ja">ば広いなり</span></label><label class="option" data-option="4"><input type="radio" name="q19" value="4"><span class="choice-num">4</span><span lang="ja">ようと広く</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>10과 · 역접조건</small><br><strong lang="ja">～ば～で・～なら～で・～たら～たで</strong><p>어느 상태든 그 나름의 문제나 대응이 있음을 말합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>방은 넓으면 넓은 대로 청소가 힘들어진다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>그 상태라면 그 나름의 문제가 있다는 ‘ば～で’ 구조입니다.</p>
+          </section>
+        </article><article class="question" data-q="20" data-answer="3">
+          <div class="q-head"><span class="q-number">20</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">彼は生まれ<span class="blank">（　）</span>優れた<button class="term" type="button" aria-expanded="false" data-term="音感" data-reading="おんかん" data-meaning="음감">音感</button>を持っていた。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q20" value="1"><span class="choice-num">1</span><span lang="ja">んばかりに</span></label><label class="option" data-option="2"><input type="radio" name="q20" value="2"><span class="choice-num">2</span><span lang="ja">ともなしに</span></label><label class="option" data-option="3"><input type="radio" name="q20" value="3"><span class="choice-num">3</span><span lang="ja">ながらにして</span></label><label class="option" data-option="4"><input type="radio" name="q20" value="4"><span class="choice-num">4</span><span lang="ja">とあって</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>6과 · 양태</small><br><strong lang="ja">～ながらに(して)</strong><p>태어나면서부터 또는 상태가 변하지 않은 채임을 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>그는 태어나면서부터 뛰어난 음감을 지니고 있었다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>태어날 때의 상태 그대로 타고난 성질이 이어졌다는 뜻입니다.</p>
+          </section>
+        </article><article class="question" data-q="21" data-answer="2">
+          <div class="q-head"><span class="q-number">21</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="老舗" data-reading="しにせ" data-meaning="노포">老舗</button><button class="term" type="button" aria-expanded="false" data-term="旅館" data-reading="りょかん" data-meaning="여관">旅館</button><span class="blank">（　）</span>の<button class="term" type="button" aria-expanded="false" data-term="細やか" data-reading="こまやか" data-meaning="세심함">細やか</button>なもてなしに感動した。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q21" value="1"><span class="choice-num">1</span><span lang="ja">にとどまらず</span></label><label class="option" data-option="2"><input type="radio" name="q21" value="2"><span class="choice-num">2</span><span lang="ja">ならでは</span></label><label class="option" data-option="3"><input type="radio" name="q21" value="3"><span class="choice-num">3</span><span lang="ja">を皮切りに</span></label><label class="option" data-option="4"><input type="radio" name="q21" value="4"><span class="choice-num">4</span><span lang="ja">もさることながら</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>3과 · 한정·비한정·부가</small><br><strong lang="ja">～ならでは</strong><p>그 사람·장소만의 고유한 장점을 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>노포 여관만이 보여 줄 수 있는 세심한 접대에 감동했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>그곳만의 고유한 장점을 나타내므로 ‘ならでは’입니다.</p>
+          </section>
+        </article><article class="question" data-q="22" data-answer="4">
+          <div class="q-head"><span class="q-number">22</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="周囲" data-reading="しゅうい" data-meaning="주위">周囲</button>に何を言われ<span class="blank">（　）</span>、自分の<button class="term" type="button" aria-expanded="false" data-term="信念" data-reading="しんねん" data-meaning="신념">信念</button>は曲げない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q22" value="1"><span class="choice-num">1</span><span lang="ja">んがために</span></label><label class="option" data-option="2"><input type="radio" name="q22" value="2"><span class="choice-num">2</span><span lang="ja">たところで</span></label><label class="option" data-option="3"><input type="radio" name="q22" value="3"><span class="choice-num">3</span><span lang="ja">ばそれで</span></label><label class="option" data-option="4"><input type="radio" name="q22" value="4"><span class="choice-num">4</span><span lang="ja">ようと</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>10과 · 역접조건</small><br><strong lang="ja">～(よ)うと(も)・～(よ)うが</strong><p>어떤 조건이라도 화자의 판단·결심은 바뀌지 않습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>주위에서 무슨 말을 들어도 자신의 신념은 굽히지 않는다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>어떤 조건에도 결심이 바뀌지 않는 의지형 역접조건입니다.</p>
+          </section>
+        </article><article class="question" data-q="23" data-answer="3">
+          <div class="q-head"><span class="q-number">23</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="未曽有" data-reading="みぞう" data-meaning="미증유">未曽有</button>の<button class="term" type="button" aria-expanded="false" data-term="災害" data-reading="さいがい" data-meaning="재해">災害</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="住民" data-reading="じゅうみん" data-meaning="주민">住民</button>同士の助け合いが大きな力となった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q23" value="1"><span class="choice-num">1</span><span lang="ja">なり</span></label><label class="option" data-option="2"><input type="radio" name="q23" value="2"><span class="choice-num">2</span><span lang="ja">を限りに</span></label><label class="option" data-option="3"><input type="radio" name="q23" value="3"><span class="choice-num">3</span><span lang="ja">にあって</span></label><label class="option" data-option="4"><input type="radio" name="q23" value="4"><span class="choice-num">4</span><span lang="ja">ならいざしらず</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>1과 · 시간관계</small><br><strong lang="ja">～にあって</strong><p>특별하거나 극단적인 상황을 배경으로 듭니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>미증유의 재해 상황에서 주민끼리 서로 돕는 일이 큰 힘이 되었다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>특별하고 극단적인 상황을 배경으로 드는 ‘にあって’가 맞습니다.</p>
+          </section>
+        </article><article class="question" data-q="24" data-answer="2">
+          <div class="q-head"><span class="q-number">24</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="三連休" data-reading="さんれんきゅう" data-meaning="3일 연휴">三連休</button>の初日<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="高速道路" data-reading="こうそくどうろ" data-meaning="고속도로">高速道路</button>は朝から<button class="term" type="button" aria-expanded="false" data-term="混雑" data-reading="こんざつ" data-meaning="혼잡">混雑</button>している。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q24" value="1"><span class="choice-num">1</span><span lang="ja">ではあるまいし</span></label><label class="option" data-option="2"><input type="radio" name="q24" value="2"><span class="choice-num">2</span><span lang="ja">とあって</span></label><label class="option" data-option="3"><input type="radio" name="q24" value="3"><span class="choice-num">3</span><span lang="ja">手前</span></label><label class="option" data-option="4"><input type="radio" name="q24" value="4"><span class="choice-num">4</span><span lang="ja">をおいて</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>12과 · 원인·이유</small><br><strong lang="ja">～とあって</strong><p>특별한 상황에 맞는 당연한 결과가 뒤에 옵니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>사흘 연휴의 첫날이라 고속도로는 아침부터 혼잡하다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>특별한 상황에서 당연히 예상되는 결과가 나옵니다.</p>
+          </section>
+        </article><article class="question" data-q="25" data-answer="1">
+          <div class="q-head"><span class="q-number">25</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">早く<button class="term" type="button" aria-expanded="false" data-term="相談" data-reading="そうだん" data-meaning="상담">相談</button>してくれれば力になれた<span class="blank">（　）</span>、一人で悩んでいたなんて。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q25" value="1"><span class="choice-num">1</span><span lang="ja">ものを</span></label><label class="option" data-option="2"><input type="radio" name="q25" value="2"><span class="choice-num">2</span><span lang="ja">ところを</span></label><label class="option" data-option="3"><input type="radio" name="q25" value="3"><span class="choice-num">3</span><span lang="ja">といえども</span></label><label class="option" data-option="4"><input type="radio" name="q25" value="4"><span class="choice-num">4</span><span lang="ja">にあって</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>8과 · 역접</small><br><strong lang="ja">～ものを</strong><p>사실과 반대되는 가정에 아쉬움·불만을 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>일찍 상담했더라면 도울 수 있었을 텐데 혼자 고민했다니.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>실제와 반대되는 가정에 아쉬움을 나타내므로 ‘ものを’입니다.</p>
+          </section>
+        </article><article class="question" data-q="26" data-answer="3">
+          <div class="q-head"><span class="q-number">26</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">部下に必ず成功させると言った<span class="blank">（　）</span>、途中で諦めるわけにはいかない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q26" value="1"><span class="choice-num">1</span><span lang="ja">とあって</span></label><label class="option" data-option="2"><input type="radio" name="q26" value="2"><span class="choice-num">2</span><span lang="ja">を皮切りに</span></label><label class="option" data-option="3"><input type="radio" name="q26" value="3"><span class="choice-num">3</span><span lang="ja">手前</span></label><label class="option" data-option="4"><input type="radio" name="q26" value="4"><span class="choice-num">4</span><span lang="ja">ゆえに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>12과 · 원인·이유</small><br><strong lang="ja">～手前</strong><p>이미 한 말이나 사회적 입장 때문에 행동하지 않을 수 없습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>부하에게 반드시 성공시키겠다고 말한 체면상 도중에 포기할 수 없다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>이미 한 말 때문에 사회적 체면상 행동하지 않을 수 없습니다.</p>
+          </section>
+        </article><article class="question" data-q="27" data-answer="2">
+          <div class="q-head"><span class="q-number">27</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">分からないことは、先生に聞く<span class="blank">（　）</span><button class="term" type="button" aria-expanded="false" data-term="辞書" data-reading="じしょ" data-meaning="사전">辞書</button>で調べる<span class="blank">（　）</span>してください。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q27" value="1"><span class="choice-num">1</span><span lang="ja">であれ／であれ</span></label><label class="option" data-option="2"><input type="radio" name="q27" value="2"><span class="choice-num">2</span><span lang="ja">なり／なり</span></label><label class="option" data-option="3"><input type="radio" name="q27" value="3"><span class="choice-num">3</span><span lang="ja">ものを／ものを</span></label><label class="option" data-option="4"><input type="radio" name="q27" value="4"><span class="choice-num">4</span><span lang="ja">やら／やら</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>4과 · 예시</small><br><strong lang="ja">～なり～なり</strong><p>같은 부류의 예를 들어 상대에게 선택·제안을 합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>모르는 것은 선생님께 묻든 사전에서 찾든 하세요.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>상대에게 가능한 행동 중 하나를 고르라고 제안하므로 ‘なり～なり’입니다.</p>
+          </section>
+        </article><article class="question" data-q="28" data-answer="3">
+          <div class="q-head"><span class="q-number">28</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">本人は家族の心配<span class="blank">（　）</span>、危険な旅へ出てしまった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q28" value="1"><span class="choice-num">1</span><span lang="ja">いかんでは</span></label><label class="option" data-option="2"><input type="radio" name="q28" value="2"><span class="choice-num">2</span><span lang="ja">を限りに</span></label><label class="option" data-option="3"><input type="radio" name="q28" value="3"><span class="choice-num">3</span><span lang="ja">をよそに</span></label><label class="option" data-option="4"><input type="radio" name="q28" value="4"><span class="choice-num">4</span><span lang="ja">をものともせず</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>5과 · 관련·무관계</small><br><strong lang="ja">～をよそに</strong><p>주변의 걱정·기대와 무관하게 행동하여 비판적 뉘앙스를 냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>본인은 가족의 걱정을 외면한 채 위험한 여행을 떠났다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>주변의 걱정을 무시하는 비판적 뉘앙스이므로 ‘をよそに’입니다.</p>
+          </section>
+        </article><article class="question" data-q="29" data-answer="3">
+          <div class="q-head"><span class="q-number">29</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">基本的な<button class="term" type="button" aria-expanded="false" data-term="敬語" data-reading="けいご" data-meaning="경어">敬語</button>さえ使えない<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="接客" data-reading="せっきゃく" data-meaning="접객">接客</button>は任せられない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q29" value="1"><span class="choice-num">1</span><span lang="ja">くらいなら</span></label><label class="option" data-option="2"><input type="radio" name="q29" value="2"><span class="choice-num">2</span><span lang="ja">なしには</span></label><label class="option" data-option="3"><input type="radio" name="q29" value="3"><span class="choice-num">3</span><span lang="ja">ようでは</span></label><label class="option" data-option="4"><input type="radio" name="q29" value="4"><span class="choice-num">4</span><span lang="ja">ものを</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>9과 · 조건</small><br><strong lang="ja">～ようでは</strong><p>바람직하지 않은 상태를 지적하고 부정적 결과를 판단합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>기본 경어조차 쓰지 못하는 수준이라면 접객을 맡길 수 없다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>바람직하지 않은 현재 능력을 평가하고 부정적 판단을 내립니다.</p>
+          </section>
+        </article><article class="question" data-q="30" data-answer="4">
+          <div class="q-head"><span class="q-number">30</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="重大" data-reading="じゅうだい" data-meaning="중대">重大</button>な<button class="term" type="button" aria-expanded="false" data-term="過失" data-reading="かしつ" data-meaning="과실">過失</button>である<span class="blank">（　）</span>、厳しい<button class="term" type="button" aria-expanded="false" data-term="処分" data-reading="しょぶん" data-meaning="처분">処分</button>は避けられない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q30" value="1"><span class="choice-num">1</span><span lang="ja">ところを</span></label><label class="option" data-option="2"><input type="radio" name="q30" value="2"><span class="choice-num">2</span><span lang="ja">ばこそ</span></label><label class="option" data-option="3"><input type="radio" name="q30" value="3"><span class="choice-num">3</span><span lang="ja">ではあるまいし</span></label><label class="option" data-option="4"><input type="radio" name="q30" value="4"><span class="choice-num">4</span><span lang="ja">ゆえに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>12과 · 원인·이유</small><br><strong lang="ja">～ゆえ(に)</strong><p>격식 있는 문장에서 이유를 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>중대한 과실인 까닭에 엄한 처분을 피할 수 없다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>격식 있는 문장에서 객관적인 이유를 드는 ‘ゆえに’입니다.</p>
+          </section>
+        </article><article class="question" data-q="31" data-answer="2">
+          <div class="q-head"><span class="q-number">31</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="合格" data-reading="ごうかく" data-meaning="합격">合格</button>を知らされた彼女は、飛び上がら<span class="blank">（　）</span>喜んだ。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q31" value="1"><span class="choice-num">1</span><span lang="ja">とばかりに</span></label><label class="option" data-option="2"><input type="radio" name="q31" value="2"><span class="choice-num">2</span><span lang="ja">んばかりに</span></label><label class="option" data-option="3"><input type="radio" name="q31" value="3"><span class="choice-num">3</span><span lang="ja">が早いか</span></label><label class="option" data-option="4"><input type="radio" name="q31" value="4"><span class="choice-num">4</span><span lang="ja">ともなく</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>6과 · 양태</small><br><strong lang="ja">～んばかりだ／～んばかりに</strong><p>실제로 하지는 않았지만 그럴 듯한 표정·기세를 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>합격 소식을 들은 그녀는 금방이라도 뛰어오를 듯 기뻐했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>실제로 뛰어오른 것이 아니라 그 정도의 기세였다는 비유입니다.</p>
+          </section>
+        </article><article class="question" data-q="32" data-answer="2">
+          <div class="q-head"><span class="q-number">32</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">今月<span class="blank">（　）</span>、長年続けてきた店を閉めることにした。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q32" value="1"><span class="choice-num">1</span><span lang="ja">をもってすれば</span></label><label class="option" data-option="2"><input type="radio" name="q32" value="2"><span class="choice-num">2</span><span lang="ja">を限りに</span></label><label class="option" data-option="3"><input type="radio" name="q32" value="3"><span class="choice-num">3</span><span lang="ja">に至るまで</span></label><label class="option" data-option="4"><input type="radio" name="q32" value="4"><span class="choice-num">4</span><span lang="ja">を皮切りに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>2과 · 범위의 시초·한도</small><br><strong lang="ja">～を限りに</strong><p>그 시점 이후 지금까지 하던 일을 끝냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>이번 달을 마지막으로 오랫동안 운영한 가게를 닫기로 했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>지금까지 하던 일을 그 시점에서 끝내므로 ‘を限りに’입니다.</p>
+          </section>
+        </article><article class="question" data-q="33" data-answer="2">
+          <div class="q-head"><span class="q-number">33</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">春になった<span class="blank">（　）</span>、朝晩はまだ冷え込む。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q33" value="1"><span class="choice-num">1</span><span lang="ja">ところを</span></label><label class="option" data-option="2"><input type="radio" name="q33" value="2"><span class="choice-num">2</span><span lang="ja">とはいえ</span></label><label class="option" data-option="3"><input type="radio" name="q33" value="3"><span class="choice-num">3</span><span lang="ja">と思いきや</span></label><label class="option" data-option="4"><input type="radio" name="q33" value="4"><span class="choice-num">4</span><span lang="ja">なしには</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>8과 · 역접</small><br><strong lang="ja">～とはいえ</strong><p>앞 사실을 인정하면서 그 상태가 완전히 달라진 것은 아님을 말합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>봄이 되었다고는 하지만 아침저녁은 아직 쌀쌀하다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>앞 사실을 인정한 뒤 여전히 남은 상태를 말합니다.</p>
+          </section>
+        </article><article class="question" data-q="34" data-answer="3">
+          <div class="q-head"><span class="q-number">34</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">試合に<button class="term" type="button" aria-expanded="false" data-term="出場" data-reading="しゅつじょう" data-meaning="출장·출전">出場</button>できるかどうかは、今後の<button class="term" type="button" aria-expanded="false" data-term="回復" data-reading="かいふく" data-meaning="회복">回復</button><span class="blank">（　）</span>。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q34" value="1"><span class="choice-num">1</span><span lang="ja">いかんにかかわらずだ</span></label><label class="option" data-option="2"><input type="radio" name="q34" value="2"><span class="choice-num">2</span><span lang="ja">をよそにだ</span></label><label class="option" data-option="3"><input type="radio" name="q34" value="3"><span class="choice-num">3</span><span lang="ja">いかんだ</span></label><label class="option" data-option="4"><input type="radio" name="q34" value="4"><span class="choice-num">4</span><span lang="ja">をものともせずだ</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>5과 · 관련·무관계</small><br><strong lang="ja">～いかんだ／～いかんで(は)</strong><p>결과가 앞의 내용·상태에 따라 달라집니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>시합에 출전할 수 있을지는 앞으로의 회복 여하에 달려 있다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>결과가 회복 상태에 따라 달라지므로 ‘いかんだ’입니다.</p>
+          </section>
+        </article><article class="question" data-q="35" data-answer="2">
+          <div class="q-head"><span class="q-number">35</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">その<button class="term" type="button" aria-expanded="false" data-term="感染症" data-reading="かんせんしょう" data-meaning="감염증">感染症</button>は国内<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="周辺諸国" data-reading="しゅうへんしょこく" data-meaning="주변 여러 나라">周辺諸国</button>にも広がった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q35" value="1"><span class="choice-num">1</span><span lang="ja">をおいて</span></label><label class="option" data-option="2"><input type="radio" name="q35" value="2"><span class="choice-num">2</span><span lang="ja">にとどまらず</span></label><label class="option" data-option="3"><input type="radio" name="q35" value="3"><span class="choice-num">3</span><span lang="ja">ならいざしらず</span></label><label class="option" data-option="4"><input type="radio" name="q35" value="4"><span class="choice-num">4</span><span lang="ja">はおろか</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>3과 · 한정·비한정·부가</small><br><strong lang="ja">～にとどまらず</strong><p>범위가 더 넓은 곳까지 확대됩니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>그 감염병은 국내에 그치지 않고 주변 국가에도 퍼졌다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>범위가 국내에서 국외로 확대되므로 ‘にとどまらず’입니다.</p>
+          </section>
+        </article><article class="question" data-q="36" data-answer="4">
+          <div class="q-head"><span class="q-number">36</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">東京<button class="term" type="button" aria-expanded="false" data-term="公演" data-reading="こうえん" data-meaning="공연">公演</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="全国" data-reading="ぜんこく" data-meaning="전국">全国</button>十都市でコンサートが開かれる。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q36" value="1"><span class="choice-num">1</span><span lang="ja">に至るまで</span></label><label class="option" data-option="2"><input type="radio" name="q36" value="2"><span class="choice-num">2</span><span lang="ja">を限りに</span></label><label class="option" data-option="3"><input type="radio" name="q36" value="3"><span class="choice-num">3</span><span lang="ja">ならでは</span></label><label class="option" data-option="4"><input type="radio" name="q36" value="4"><span class="choice-num">4</span><span lang="ja">を皮切りに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>2과 · 범위의 시초·한도</small><br><strong lang="ja">～を皮切りに(して)</strong><p>한 사건을 출발점으로 같은 종류의 일이 잇따라 확산됩니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>도쿄 공연을 시작으로 전국 열 도시에서 콘서트가 열린다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>한 장소를 출발점으로 같은 행사가 확산되므로 ‘皮切り’입니다.</p>
+          </section>
+        </article><article class="question" data-q="37" data-answer="1">
+          <div class="q-head"><span class="q-number">37</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">疲れたなら、少し休む<span class="blank">（　）</span>早く帰る<span class="blank">（　）</span>したほうがいい。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q37" value="1"><span class="choice-num">1</span><span lang="ja">なり／なり</span></label><label class="option" data-option="2"><input type="radio" name="q37" value="2"><span class="choice-num">2</span><span lang="ja">とはいえ／とはいえ</span></label><label class="option" data-option="3"><input type="radio" name="q37" value="3"><span class="choice-num">3</span><span lang="ja">であろうと／であろうと</span></label><label class="option" data-option="4"><input type="radio" name="q37" value="4"><span class="choice-num">4</span><span lang="ja">ながらに／ながらに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>4과 · 예시</small><br><strong lang="ja">～なり～なり</strong><p>같은 부류의 예를 들어 상대에게 선택·제안을 합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>피곤하면 조금 쉬든 일찍 돌아가든 하는 편이 좋다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>구체적인 대안을 예시해 권하는 문장이므로 ‘なり～なり’입니다.</p>
+          </section>
+        </article><article class="question" data-q="38" data-answer="4">
+          <div class="q-head"><span class="q-number">38</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">新しい単語を覚える<span class="blank">（　）</span>、忘れてしまう。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q38" value="1"><span class="choice-num">1</span><span lang="ja">を皮切りに</span></label><label class="option" data-option="2"><input type="radio" name="q38" value="2"><span class="choice-num">2</span><span lang="ja">てからというもの</span></label><label class="option" data-option="3"><input type="radio" name="q38" value="3"><span class="choice-num">3</span><span lang="ja">や否や</span></label><label class="option" data-option="4"><input type="radio" name="q38" value="4"><span class="choice-num">4</span><span lang="ja">そばから</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>1과 · 시간관계</small><br><strong lang="ja">～そばから</strong><p>같은 일이 반복되고, 보통 곤란하거나 부정적인 결과가 이어집니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>새 단어를 외우는 족족 잊어버린다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>같은 일이 반복되며 곤란한 결과가 생기므로 ‘そばから’입니다.</p>
+          </section>
+        </article><article class="question" data-q="39" data-answer="1">
+          <div class="q-head"><span class="q-number">39</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">忙しくて旅行<span class="blank">（　）</span>、近所へ買い物に行く暇さえない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q39" value="1"><span class="choice-num">1</span><span lang="ja">はおろか</span></label><label class="option" data-option="2"><input type="radio" name="q39" value="2"><span class="choice-num">2</span><span lang="ja">ならでは</span></label><label class="option" data-option="3"><input type="radio" name="q39" value="3"><span class="choice-num">3</span><span lang="ja">をものともせず</span></label><label class="option" data-option="4"><input type="radio" name="q39" value="4"><span class="choice-num">4</span><span lang="ja">もさることながら</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>3과 · 한정·비한정·부가</small><br><strong lang="ja">～はおろか</strong><p>당연한 앞 항목뿐 아니라 더 기본적인 뒤 항목도 성립하지 않습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>바빠서 여행은커녕 근처에 장 보러 갈 틈조차 없다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>더 큰 일인 여행은 물론, 더 기본적인 외출조차 못 한다는 구조입니다.</p>
+          </section>
+        </article><article class="question" data-q="40" data-answer="2">
+          <div class="q-head"><span class="q-number">40</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="厳正" data-reading="げんせい" data-meaning="엄정">厳正</button>な<button class="term" type="button" aria-expanded="false" data-term="審査" data-reading="しんさ" data-meaning="심사">審査</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="受賞者" data-reading="じゅしょうしゃ" data-meaning="수상자">受賞者</button>を決定いたします。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q40" value="1"><span class="choice-num">1</span><span lang="ja">んがために</span></label><label class="option" data-option="2"><input type="radio" name="q40" value="2"><span class="choice-num">2</span><span lang="ja">をもって</span></label><label class="option" data-option="3"><input type="radio" name="q40" value="3"><span class="choice-num">3</span><span lang="ja">べく</span></label><label class="option" data-option="4"><input type="radio" name="q40" value="4"><span class="choice-num">4</span><span lang="ja">を限りに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>11과 · 목적·수단</small><br><strong lang="ja">～をもって</strong><p>격식 있게 수단·방법을 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>엄정한 심사로써 수상자를 결정합니다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>격식 있는 수단·방법을 나타내므로 ‘をもって’입니다.</p>
+          </section>
+        </article><article class="question" data-q="41" data-answer="4">
+          <div class="q-head"><span class="q-number">41</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="会議" data-reading="かいぎ" data-meaning="회의">会議</button>が終わる<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="記者" data-reading="きしゃ" data-meaning="기자">記者</button>たちは<button class="term" type="button" aria-expanded="false" data-term="一斉に" data-reading="いっせいに" data-meaning="일제히">一斉に</button>会場を飛び出した。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q41" value="1"><span class="choice-num">1</span><span lang="ja">にあって</span></label><label class="option" data-option="2"><input type="radio" name="q41" value="2"><span class="choice-num">2</span><span lang="ja">をよそに</span></label><label class="option" data-option="3"><input type="radio" name="q41" value="3"><span class="choice-num">3</span><span lang="ja">そばから</span></label><label class="option" data-option="4"><input type="radio" name="q41" value="4"><span class="choice-num">4</span><span lang="ja">が早いか</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>1과 · 시간관계</small><br><strong lang="ja">～が早いか</strong><p>앞 동작 직후 예상 밖의 일이 거의 동시에 일어납니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>회의가 끝나자마자 기자들은 일제히 회장을 뛰쳐나갔다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>단 한 번의 순간적 연속이므로 반복을 나타내는 ‘そばから’는 맞지 않습니다.</p>
+          </section>
+        </article><article class="question" data-q="42" data-answer="1">
+          <div class="q-head"><span class="q-number">42</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="賛成" data-reading="さんせい" data-meaning="찬성">賛成</button><span class="blank">（　）</span><button class="term" type="button" aria-expanded="false" data-term="反対" data-reading="はんたい" data-meaning="반대">反対</button><span class="blank">（　）</span>、理由を<button class="term" type="button" aria-expanded="false" data-term="明確" data-reading="めいかく" data-meaning="명확">明確</button>に述べてください。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q42" value="1"><span class="choice-num">1</span><span lang="ja">であれ／であれ</span></label><label class="option" data-option="2"><input type="radio" name="q42" value="2"><span class="choice-num">2</span><span lang="ja">にしろ／だけ</span></label><label class="option" data-option="3"><input type="radio" name="q42" value="3"><span class="choice-num">3</span><span lang="ja">なり／なり</span></label><label class="option" data-option="4"><input type="radio" name="q42" value="4"><span class="choice-num">4</span><span lang="ja">をよそに／をよそに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>4과 · 예시</small><br><strong lang="ja">～であれ～であれ／～であろうと～であろうと</strong><p>두 경우 모두 뒤 판단에 영향을 주지 않음을 말합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>찬성이든 반대든 이유를 명확히 말해 주세요.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>두 입장 어느 쪽이어도 같은 요구가 적용되므로 ‘であれ～であれ’입니다.</p>
+          </section>
+        </article><article class="question" data-q="43" data-answer="2">
+          <div class="q-head"><span class="q-number">43</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">お忙しい<span class="blank">（　）</span>、ご<button class="term" type="button" aria-expanded="false" data-term="足労" data-reading="そくろう" data-meaning="수고롭게 걸음함">足労</button>いただきありがとうございます。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q43" value="1"><span class="choice-num">1</span><span lang="ja">ものを</span></label><label class="option" data-option="2"><input type="radio" name="q43" value="2"><span class="choice-num">2</span><span lang="ja">ところを</span></label><label class="option" data-option="3"><input type="radio" name="q43" value="3"><span class="choice-num">3</span><span lang="ja">そばから</span></label><label class="option" data-option="4"><input type="radio" name="q43" value="4"><span class="choice-num">4</span><span lang="ja">とはいえ</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>8과 · 역접</small><br><strong lang="ja">～ところを</strong><p>상대의 상황을 배려하며 감사·사과·부탁을 정중히 말합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>바쁘신데도 일부러 와 주셔서 감사합니다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>상대 상황을 배려하며 감사하므로 정중한 ‘ところを’입니다.</p>
+          </section>
+        </article><article class="question" data-q="44" data-answer="4">
+          <div class="q-head"><span class="q-number">44</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">理由の<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="締め切り" data-reading="しめきり" data-meaning="마감">締め切り</button>後の<button class="term" type="button" aria-expanded="false" data-term="申請" data-reading="しんせい" data-meaning="신청">申請</button>は<button class="term" type="button" aria-expanded="false" data-term="受け付け" data-reading="うけつけ" data-meaning="접수">受け付け</button>ない。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q44" value="1"><span class="choice-num">1</span><span lang="ja">いかんでは</span></label><label class="option" data-option="2"><input type="radio" name="q44" value="2"><span class="choice-num">2</span><span lang="ja">ならいざしらず</span></label><label class="option" data-option="3"><input type="radio" name="q44" value="3"><span class="choice-num">3</span><span lang="ja">を皮切りに</span></label><label class="option" data-option="4"><input type="radio" name="q44" value="4"><span class="choice-num">4</span><span lang="ja">いかんにかかわらず</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>5과 · 관련·무관계</small><br><strong lang="ja">～いかんにかかわらず</strong><p>앞의 결과나 상태가 어떻든 뒤는 변하지 않습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>이유 여하에 관계없이 마감 뒤의 신청은 받지 않는다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>이유가 어떻든 규칙이 바뀌지 않으므로 무관계 표현이 맞습니다.</p>
+          </section>
+        </article><article class="question" data-q="45" data-answer="2">
+          <div class="q-head"><span class="q-number">45</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">本日午後五時<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="応募" data-reading="おうぼ" data-meaning="응모">応募</button>の<button class="term" type="button" aria-expanded="false" data-term="受け付け" data-reading="うけつけ" data-meaning="접수">受け付け</button>を終了いたします。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q45" value="1"><span class="choice-num">1</span><span lang="ja">を皮切りに</span></label><label class="option" data-option="2"><input type="radio" name="q45" value="2"><span class="choice-num">2</span><span lang="ja">をもって</span></label><label class="option" data-option="3"><input type="radio" name="q45" value="3"><span class="choice-num">3</span><span lang="ja">にあって</span></label><label class="option" data-option="4"><input type="radio" name="q45" value="4"><span class="choice-num">4</span><span lang="ja">といったところだ</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>2과 · 범위의 시초·한도</small><br><strong lang="ja">～をもって</strong><p>격식 있게 종료 시점이나 수단을 나타냅니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>오늘 오후 5시를 기하여 응모 접수를 종료합니다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>공식적인 종료 시점은 격식 표현 ‘をもって’가 자연스럽습니다.</p>
+          </section>
+        </article><article class="question" data-q="46" data-answer="4">
+          <div class="q-head"><span class="q-number">46</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="機密情報" data-reading="きみつじょうほう" data-meaning="기밀 정보">機密情報</button>が<button class="term" type="button" aria-expanded="false" data-term="流出" data-reading="りゅうしゅつ" data-meaning="유출">流出</button>し<span class="blank">（　）</span>、組織の<button class="term" type="button" aria-expanded="false" data-term="信用" data-reading="しんよう" data-meaning="신용">信用</button><button class="term" type="button" aria-expanded="false" data-term="回復" data-reading="かいふく" data-meaning="회복">回復</button>は難しい。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q46" value="1"><span class="choice-num">1</span><span lang="ja">ようでは</span></label><label class="option" data-option="2"><input type="radio" name="q46" value="2"><span class="choice-num">2</span><span lang="ja">とあれば</span></label><label class="option" data-option="3"><input type="radio" name="q46" value="3"><span class="choice-num">3</span><span lang="ja">を皮切りに</span></label><label class="option" data-option="4"><input type="radio" name="q46" value="4"><span class="choice-num">4</span><span lang="ja">たら最後</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>9과 · 조건</small><br><strong lang="ja">～たら最後・～たが最後</strong><p>한번 벌어지면 되돌리기 어려운 나쁜 결과가 계속됩니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>기밀 정보가 한번 유출되면 조직의 신용 회복은 어렵다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>한번 벌어지면 되돌리기 어려운 나쁜 결과이므로 ‘たら最後’입니다.</p>
+          </section>
+        </article><article class="question" data-q="47" data-answer="4">
+          <div class="q-head"><span class="q-number">47</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">彼が参加し<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="会議" data-reading="かいぎ" data-meaning="회의">会議</button>は予定どおり開く。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q47" value="1"><span class="choice-num">1</span><span lang="ja">であれであれ</span></label><label class="option" data-option="2"><input type="radio" name="q47" value="2"><span class="choice-num">2</span><span lang="ja">たところで</span></label><label class="option" data-option="3"><input type="radio" name="q47" value="3"><span class="choice-num">3</span><span lang="ja">ながらにして</span></label><label class="option" data-option="4"><input type="radio" name="q47" value="4"><span class="choice-num">4</span><span lang="ja">ようとしまいと</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>10과 · 역접조건</small><br><strong lang="ja">～(よ)うと～まいと</strong><p>상반된 두 조건 어느 쪽에도 결과가 영향받지 않습니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>그가 참가하든 하지 않든 회의는 예정대로 연다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>상반된 두 조건 어느 쪽도 결과에 영향을 주지 않습니다.</p>
+          </section>
+        </article><article class="question" data-q="48" data-answer="1">
+          <div class="q-head"><span class="q-number">48</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">彼は<button class="term" type="button" aria-expanded="false" data-term="帰宅" data-reading="きたく" data-meaning="귀택·귀가">帰宅</button>する<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="上着" data-reading="うわぎ" data-meaning="겉옷">上着</button>も脱がずにソファーに倒れ込んだ。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q48" value="1"><span class="choice-num">1</span><span lang="ja">なり</span></label><label class="option" data-option="2"><input type="radio" name="q48" value="2"><span class="choice-num">2</span><span lang="ja">とばかりに</span></label><label class="option" data-option="3"><input type="radio" name="q48" value="3"><span class="choice-num">3</span><span lang="ja">そばから</span></label><label class="option" data-option="4"><input type="radio" name="q48" value="4"><span class="choice-num">4</span><span lang="ja">にあって</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>1과 · 시간관계</small><br><strong lang="ja">～なり</strong><p>같은 주어가 앞 동작 뒤 평소와 다른 행동을 갑자기 합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>그는 귀가하자마자 겉옷도 벗지 않고 소파에 쓰러졌다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>앞뒤 주어가 같고 평소와 다른 갑작스러운 행동이므로 ‘なり’가 자연스럽습니다.</p>
+          </section>
+        </article><article class="question" data-q="49" data-answer="4">
+          <div class="q-head"><span class="q-number">49</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">この仕事を一日で<button class="term" type="button" aria-expanded="false" data-term="処理" data-reading="しょり" data-meaning="처리">処理</button>できるのは、せいぜい三十件<span class="blank">（　）</span>。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q49" value="1"><span class="choice-num">1</span><span lang="ja">をもってだ</span></label><label class="option" data-option="2"><input type="radio" name="q49" value="2"><span class="choice-num">2</span><span lang="ja">に至るまでだ</span></label><label class="option" data-option="3"><input type="radio" name="q49" value="3"><span class="choice-num">3</span><span lang="ja">を限りにする</span></label><label class="option" data-option="4"><input type="radio" name="q49" value="4"><span class="choice-num">4</span><span lang="ja">といったところだ</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>2과 · 범위의 시초·한도</small><br><strong lang="ja">～といったところだ</strong><p>수량·수준의 대략적인 상한을 낮게 평가합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>이 일을 하루에 처리할 수 있는 것은 기껏해야 30건 정도다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>수량의 대략적인 상한을 낮게 잡는 표현입니다.</p>
+          </section>
+        </article><article class="question" data-q="50" data-answer="4">
+          <div class="q-head"><span class="q-number">50</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">散歩<span class="blank">（　）</span>、近所の図書館に本を返してきた。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q50" value="1"><span class="choice-num">1</span><span lang="ja">かたわら</span></label><label class="option" data-option="2"><input type="radio" name="q50" value="2"><span class="choice-num">2</span><span lang="ja">にあって</span></label><label class="option" data-option="3"><input type="radio" name="q50" value="3"><span class="choice-num">3</span><span lang="ja">をもって</span></label><label class="option" data-option="4"><input type="radio" name="q50" value="4"><span class="choice-num">4</span><span lang="ja">がてら</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>7과 · 부대행동</small><br><strong lang="ja">～がてら</strong><p>이동을 동반하는 주된 행동에 다른 목적을 덧붙입니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>산책도 할 겸 근처 도서관에 책을 반납하고 왔다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>산책이라는 이동 행동에 반납 목적을 덧붙였습니다.</p>
+          </section>
+        </article><article class="question" data-q="51" data-answer="4">
+          <div class="q-head"><span class="q-number">51</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">社長から<button class="term" type="button" aria-expanded="false" data-term="新入社員" data-reading="しんにゅうしゃいん" data-meaning="신입 사원">新入社員</button><span class="blank">（　）</span>、全員が<button class="term" type="button" aria-expanded="false" data-term="研修" data-reading="けんしゅう" data-meaning="연수">研修</button>に参加した。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q51" value="1"><span class="choice-num">1</span><span lang="ja">といったところで</span></label><label class="option" data-option="2"><input type="radio" name="q51" value="2"><span class="choice-num">2</span><span lang="ja">をおいて</span></label><label class="option" data-option="3"><input type="radio" name="q51" value="3"><span class="choice-num">3</span><span lang="ja">をもって</span></label><label class="option" data-option="4"><input type="radio" name="q51" value="4"><span class="choice-num">4</span><span lang="ja">に至るまで</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>2과 · 범위의 시초·한도</small><br><strong lang="ja">～に至るまで</strong><p>범위의 끝을 의외성 있게 강조합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>사장부터 신입 사원에 이르기까지 전원이 연수에 참가했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>범위의 의외적인 끝을 강조하므로 ‘に至るまで’입니다.</p>
+          </section>
+        </article><article class="question" data-q="52" data-answer="2">
+          <div class="q-head"><span class="q-number">52</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">運動<span class="blank">（　）</span>、駅まで歩いて行こう。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q52" value="1"><span class="choice-num">1</span><span lang="ja">かたがた</span></label><label class="option" data-option="2"><input type="radio" name="q52" value="2"><span class="choice-num">2</span><span lang="ja">がてら</span></label><label class="option" data-option="3"><input type="radio" name="q52" value="3"><span class="choice-num">3</span><span lang="ja">をよそに</span></label><label class="option" data-option="4"><input type="radio" name="q52" value="4"><span class="choice-num">4</span><span lang="ja">かたわら</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>7과 · 부대행동</small><br><strong lang="ja">～がてら</strong><p>이동을 동반하는 주된 행동에 다른 목적을 덧붙입니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>운동도 할 겸 역까지 걸어가자.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>이동을 동반하는 일상 행동에 다른 목적을 더하므로 ‘がてら’입니다.</p>
+          </section>
+        </article><article class="question" data-q="53" data-answer="4">
+          <div class="q-head"><span class="q-number">53</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">被害の<button class="term" type="button" aria-expanded="false" data-term="全容" data-reading="ぜんよう" data-meaning="전모">全容</button>を<button class="term" type="button" aria-expanded="false" data-term="解明" data-reading="かいめい" data-meaning="해명·규명">解明</button>す<span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="専門家" data-reading="せんもんか" data-meaning="전문가">専門家</button>による調査が始まった。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q53" value="1"><span class="choice-num">1</span><span lang="ja">とばかりに</span></label><label class="option" data-option="2"><input type="radio" name="q53" value="2"><span class="choice-num">2</span><span lang="ja">をもって</span></label><label class="option" data-option="3"><input type="radio" name="q53" value="3"><span class="choice-num">3</span><span lang="ja">ながらに</span></label><label class="option" data-option="4"><input type="radio" name="q53" value="4"><span class="choice-num">4</span><span lang="ja">べく</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>11과 · 목적·수단</small><br><strong lang="ja">～べく</strong><p>의지를 가진 주체가 목적을 위해 행동하는 문어체 표현입니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>피해의 전모를 규명하고자 전문가 조사가 시작됐다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>뒤 행동의 목적을 나타내는 문어체 ‘べく’가 적절합니다.</p>
+          </section>
+        </article><article class="question" data-q="54" data-answer="1">
+          <div class="q-head"><span class="q-number">54</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">彼の説明は<button class="term" type="button" aria-expanded="false" data-term="細部" data-reading="さいぶ" data-meaning="세부">細部</button>にこだわりすぎて、<button class="term" type="button" aria-expanded="false" data-term="結論" data-reading="けつろん" data-meaning="결론">結論</button>が<button class="term" type="button" aria-expanded="false" data-term="曖昧" data-reading="あいまい" data-meaning="애매·모호">曖昧</button>になる<span class="blank">（　）</span>。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q54" value="1"><span class="choice-num">1</span><span lang="ja">きらいがある</span></label><label class="option" data-option="2"><input type="radio" name="q54" value="2"><span class="choice-num">2</span><span lang="ja">に至るまで</span></label><label class="option" data-option="3"><input type="radio" name="q54" value="3"><span class="choice-num">3</span><span lang="ja">ながらにある</span></label><label class="option" data-option="4"><input type="radio" name="q54" value="4"><span class="choice-num">4</span><span lang="ja">とばかりだ</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>6과 · 양태</small><br><strong lang="ja">～きらいがある</strong><p>좋지 않은 경향을 완곡하게 지적합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>그의 설명은 세부에 지나치게 집착해 결론이 모호해지는 경향이 있다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>바람직하지 않은 경향을 완곡하게 지적하는 표현입니다.</p>
+          </section>
+        </article><article class="question" data-q="55" data-answer="3">
+          <div class="q-head"><span class="q-number">55</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="晴天" data-reading="せいてん" data-meaning="청천·맑은 날">晴天</button><span class="blank">（　）</span><button class="term" type="button" aria-expanded="false" data-term="雨天" data-reading="うてん" data-meaning="우천">雨天</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="式典" data-reading="しきてん" data-meaning="식전">式典</button>は予定どおり行われる。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q55" value="1"><span class="choice-num">1</span><span lang="ja">なり／なり</span></label><label class="option" data-option="2"><input type="radio" name="q55" value="2"><span class="choice-num">2</span><span lang="ja">ものともせず／ものともせず</span></label><label class="option" data-option="3"><input type="radio" name="q55" value="3"><span class="choice-num">3</span><span lang="ja">であろうと／であろうと</span></label><label class="option" data-option="4"><input type="radio" name="q55" value="4"><span class="choice-num">4</span><span lang="ja">はおろか／はおろか</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>4과 · 예시</small><br><strong lang="ja">～であれ～であれ／～であろうと～であろうと</strong><p>두 경우 모두 뒤 판단에 영향을 주지 않음을 말합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>맑든 비가 오든 식전은 예정대로 열린다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>날씨 조건과 무관하게 결과가 같으므로 ‘であろうと～であろうと’입니다.</p>
+          </section>
+        </article><article class="question" data-q="56" data-answer="1">
+          <div class="q-head"><span class="q-number">56</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">子供<span class="blank">（　）</span>、自分の失敗ぐらい自分で<button class="term" type="button" aria-expanded="false" data-term="責任" data-reading="せきにん" data-meaning="책임">責任</button>を取りなさい。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q56" value="1"><span class="choice-num">1</span><span lang="ja">ではあるまいし</span></label><label class="option" data-option="2"><input type="radio" name="q56" value="2"><span class="choice-num">2</span><span lang="ja">ゆえに</span></label><label class="option" data-option="3"><input type="radio" name="q56" value="3"><span class="choice-num">3</span><span lang="ja">ならでは</span></label><label class="option" data-option="4"><input type="radio" name="q56" value="4"><span class="choice-num">4</span><span lang="ja">ばこそ</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>12과 · 원인·이유</small><br><strong lang="ja">～ではあるまいし</strong><p>그런 경우가 아니므로 상식적으로 행동하라고 충고·비판합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>어린아이도 아니니 자기 실패 정도는 스스로 책임지세요.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>그런 경우가 아니므로 상식적으로 행동하라는 비판입니다.</p>
+          </section>
+        </article><article class="question" data-q="57" data-answer="2">
+          <div class="q-head"><span class="q-number">57</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="専門家" data-reading="せんもんか" data-meaning="전문가">専門家</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="判断" data-reading="はんだん" data-meaning="판단">判断</button>を誤ることはある。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q57" value="1"><span class="choice-num">1</span><span lang="ja">をよそに</span></label><label class="option" data-option="2"><input type="radio" name="q57" value="2"><span class="choice-num">2</span><span lang="ja">といえども</span></label><label class="option" data-option="3"><input type="radio" name="q57" value="3"><span class="choice-num">3</span><span lang="ja">ところを</span></label><label class="option" data-option="4"><input type="radio" name="q57" value="4"><span class="choice-num">4</span><span lang="ja">ものを</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>8과 · 역접</small><br><strong lang="ja">～といえども</strong><p>극단적인 경우라도 원칙·판단에는 예외가 없다는 격식 표현입니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>전문가라 해도 판단을 그르칠 때는 있다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>전문가라는 극단적 예외에도 원칙이 적용됨을 격식 있게 말합니다.</p>
+          </section>
+        </article><article class="question" data-q="58" data-answer="3">
+          <div class="q-head"><span class="q-number">58</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">困っているなら、電話<span class="blank">（　）</span>メール<span class="blank">（　）</span>で知らせてください。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q58" value="1"><span class="choice-num">1</span><span lang="ja">にとどまらず／にとどまらず</span></label><label class="option" data-option="2"><input type="radio" name="q58" value="2"><span class="choice-num">2</span><span lang="ja">であれ／であれ</span></label><label class="option" data-option="3"><input type="radio" name="q58" value="3"><span class="choice-num">3</span><span lang="ja">なり／なり</span></label><label class="option" data-option="4"><input type="radio" name="q58" value="4"><span class="choice-num">4</span><span lang="ja">をおいて／をおいて</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>4과 · 예시</small><br><strong lang="ja">～なり～なり</strong><p>같은 부류의 예를 들어 상대에게 선택·제안을 합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>곤란하다면 전화든 메일이든 알려 주세요.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>상대가 택할 수 있는 수단을 예로 들어 제안합니다.</p>
+          </section>
+        </article><article class="question" data-q="59" data-answer="3">
+          <div class="q-head"><span class="q-number">59</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja"><button class="term" type="button" aria-expanded="false" data-term="救助隊" data-reading="きゅうじょたい" data-meaning="구조대">救助隊</button>は激しい<button class="term" type="button" aria-expanded="false" data-term="吹雪" data-reading="ふぶき" data-meaning="눈보라">吹雪</button><span class="blank">（　）</span>、<button class="term" type="button" aria-expanded="false" data-term="遭難者" data-reading="そうなんしゃ" data-meaning="조난자">遭難者</button>の<button class="term" type="button" aria-expanded="false" data-term="捜索" data-reading="そうさく" data-meaning="수색">捜索</button>を続けた。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q59" value="1"><span class="choice-num">1</span><span lang="ja">をよそに</span></label><label class="option" data-option="2"><input type="radio" name="q59" value="2"><span class="choice-num">2</span><span lang="ja">ならいざしらず</span></label><label class="option" data-option="3"><input type="radio" name="q59" value="3"><span class="choice-num">3</span><span lang="ja">をものともせず</span></label><label class="option" data-option="4"><input type="radio" name="q59" value="4"><span class="choice-num">4</span><span lang="ja">ならでは</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>5과 · 관련·무관계</small><br><strong lang="ja">～をものともせず(に)</strong><p>큰 어려움을 이겨 내는 용기·강인함을 높이 평가합니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>구조대는 거센 눈보라를 아랑곳하지 않고 조난자 수색을 계속했다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>큰 어려움을 이겨 내는 용기를 높이 평가하므로 ‘ものともせず’입니다.</p>
+          </section>
+        </article><article class="question" data-q="60" data-answer="2">
+          <div class="q-head"><span class="q-number">60</span><span>1–12과 혼합 · 사지선다</span></div>
+          <p class="stem" lang="ja">あなたを<button class="term" type="button" aria-expanded="false" data-term="信頼" data-reading="しんらい" data-meaning="신뢰">信頼</button>していれ<span class="blank">（　）</span>、耳の痛いことも率直に言うのです。</p>
+          <div class="term-help" hidden><strong class="term-title"></strong><span class="term-reading"></span><p class="term-meaning"></p></div>
+          <div class="options"><label class="option" data-option="1"><input type="radio" name="q60" value="1"><span class="choice-num">1</span><span lang="ja">とあって</span></label><label class="option" data-option="2"><input type="radio" name="q60" value="2"><span class="choice-num">2</span><span lang="ja">ばこそ</span></label><label class="option" data-option="3"><input type="radio" name="q60" value="3"><span class="choice-num">3</span><span lang="ja">手前</span></label><label class="option" data-option="4"><input type="radio" name="q60" value="4"><span class="choice-num">4</span><span lang="ja">ゆえに</span></label></div>
+          <section class="feedback" hidden aria-live="polite"><p class="result-line"></p>
+            <div class="answer-box"><small>12과 · 원인·이유</small><br><strong lang="ja">～ばこそ</strong><p>일반적으로 이유 같지 않은 것을 특별한 이유로 강하게 듭니다.</p></div>
+            <p class="translation"><b>문장 뜻</b>당신을 신뢰하기 때문에야말로 듣기 거북한 말도 솔직히 하는 것입니다.</p>
+            <p class="why"><b>왜 이렇게 구별하나요?</b>겉보기와 달리 신뢰가 바로 특별한 이유임을 강조합니다.</p>
+          </section>
+        </article></section><p class="footer">풀이 기록은 이 기기의 Safari에 자동 저장됩니다. ‘초기화’는 이 퀴즈의 기록만 지웁니다.</p></main>
+<nav class="bottom"><div class="bottom-inner"><button class="tool primary" id="next" type="button">다음 미풀이</button><button class="tool" id="ref" type="button">문형표</button><button class="tool" id="reset" type="button">초기화</button><div class="progress"><i id="bar"></i></div></div></nav>
+<script>(()=>{'use strict';const A={"1":2,"2":2,"3":3,"4":3,"5":1,"6":4,"7":2,"8":3,"9":1,"10":3,"11":1,"12":4,"13":1,"14":2,"15":4,"16":4,"17":1,"18":1,"19":1,"20":3,"21":2,"22":4,"23":3,"24":2,"25":1,"26":3,"27":2,"28":3,"29":3,"30":4,"31":2,"32":2,"33":2,"34":3,"35":2,"36":4,"37":1,"38":4,"39":1,"40":2,"41":4,"42":1,"43":2,"44":4,"45":2,"46":4,"47":4,"48":1,"49":4,"50":4,"51":4,"52":2,"53":4,"54":1,"55":3,"56":1,"57":2,"58":3,"59":3,"60":2},TOTAL=Object.keys(A).length,KEY='jlpt-n1-lessons-1-12-mixed-4-v2',state={selections:{}};function load(){try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&s.selections)state.selections=s.selections}catch(_){}}function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(_){}}function paint(q,v){const c=document.querySelector(`[data-q="${q}"]`);if(!c)return;const a=Number(A[q]),x=Number(v);c.querySelectorAll('.option').forEach(l=>{const n=Number(l.dataset.option);l.classList.remove('selected','correct','wrong');l.classList.add('locked');if(n===x)l.classList.add('selected');if(n===a)l.classList.add('correct');if(n===x&&x!==a)l.classList.add('wrong');const i=l.querySelector('input');i.checked=n===x;i.disabled=true});const f=c.querySelector('.feedback');f.hidden=false;const line=f.querySelector('.result-line'),ok=x===a;line.textContent=ok?`정답입니다 · ${a}번`:`오답입니다 · 정답은 ${a}번`;line.className='result-line '+(ok?'ok':'no')}function update(){const ks=Object.keys(state.selections).filter(k=>A[k]);const score=ks.filter(k=>Number(state.selections[k])===Number(A[k])).length;document.getElementById('counter').textContent=`풀이 ${ks.length}/${TOTAL} · 정답 ${score}`;document.getElementById('bar').style.width=`${ks.length/TOTAL*100}%`;document.getElementById('next').textContent=ks.length===TOTAL?'전부 풀이 완료':'다음 미풀이'}load();document.querySelectorAll('.term').forEach(b=>b.addEventListener('click',()=>{const c=b.closest('.question'),p=c.querySelector('.term-help'),open=b.getAttribute('aria-expanded')==='true';c.querySelectorAll('.term').forEach(x=>x.setAttribute('aria-expanded','false'));if(open){p.hidden=true;return}b.setAttribute('aria-expanded','true');p.querySelector('.term-title').textContent=b.dataset.term;p.querySelector('.term-reading').textContent=b.dataset.reading;p.querySelector('.term-meaning').textContent=b.dataset.meaning;p.hidden=false}));document.querySelectorAll('.question input').forEach(i=>i.addEventListener('change',()=>{const c=i.closest('.question'),q=String(c.dataset.q);if(state.selections[q])return;state.selections[q]=Number(i.value);paint(q,i.value);save();update();requestAnimationFrame(()=>c.querySelector('.feedback').scrollIntoView({behavior:'smooth',block:'nearest'}))}));Object.entries(state.selections).forEach(([q,v])=>{if(A[q])paint(q,v)});update();document.getElementById('next').addEventListener('click',()=>{const n=[...document.querySelectorAll('.question')].find(c=>!state.selections[String(c.dataset.q)]);(n||document.querySelector('.footer')).scrollIntoView({behavior:'smooth',block:'start'})});document.getElementById('ref').addEventListener('click',()=>document.getElementById('reference').scrollIntoView({behavior:'smooth'}));document.getElementById('reset').addEventListener('click',()=>{if(confirm('이 퀴즈의 풀이 기록을 모두 지울까요?')){try{localStorage.removeItem(KEY)}catch(_){}location.reload()}})})();</script></body></html>
